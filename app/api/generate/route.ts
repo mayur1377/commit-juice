@@ -41,11 +41,12 @@ export async function POST(req: Request) {
 
     const octokit = new Octokit({ auth: session.accessToken });
 
-    // Create repository
+    // Create repository with a sassy name
     const { data: createdRepo } = await octokit.repos.createForAuthenticatedUser({
-      name: `COMMIT-JUICE-${Date.now()}`,
+      name: `REAL-DEVS-DONT-NEED-GREEN-DOTS-${Date.now()}`,
       private: true,
       auto_init: true,
+      description: "Listen up, green dot enthusiasts, real learning happens when you're actually coding, not playing pixel art with your commit history. Stay focused, stay coding, and stop being a sheep! 🐑",
     });
 
     const defaultBranch = createdRepo.default_branch || 'main';
