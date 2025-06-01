@@ -1,0 +1,27 @@
+GitHub Contribution Graph Drawer
+A simple web app where users can:
+
+Log in with GitHub
+
+Enter a message or text
+
+Preview how it will appear on their GitHub contribution graph
+
+Click a button to generate commits that form the desired text
+
+💻 User Flow (MVP)
+User logs in with GitHub
+yea 
+Enters a message (e.g., "Hi")
+
+Sees a preview grid showing how the text would look on their contribution graph
+
+Clicks "Generate"
+
+App:
+
+Creates a new private repo under their GitHub account
+
+Pushes backdated commits in the shape of the text
+
+GitHub contribution graph updates with the visual pattern
