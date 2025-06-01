@@ -170,9 +170,6 @@ export default function Home() {
                       {generating ? (
                         <div className="flex items-center">
                           <span className="mr-2">{statusMessage}</span>
-                          {statusMessage === "Pushing changes..." && (
-                            <div className="animate-spin h-4 w-4 border-2 border-current border-t-transparent rounded-full" />
-                          )}
                         </div>
                       ) : "Generate"}
                     </Button>
