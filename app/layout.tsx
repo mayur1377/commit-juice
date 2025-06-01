@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 const pressStart2P = Press_Start_2P({ weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "GitHub Charts",
+  title: "Commit Juice",
   description: "Create beautiful patterns in your GitHub contribution graph",
 };
 
@@ -29,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.className} antialiased`}
       >

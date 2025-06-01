@@ -9,7 +9,7 @@ interface YearSelectorProps {
 
 export function YearSelector({ availableYears, selectedYear, onYearSelect }: YearSelectorProps) {
   return (
-    <div className="flex flex-col gap-2 min-w-[60px]">
+    <div className="flex flex-col gap-2 w-auto max-w-xs mx-auto md:min-w-[60px] md:mx-0">
       {availableYears.map((year) => (
         <Button
           key={year}

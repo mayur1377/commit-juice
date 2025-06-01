@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Github } from "lucide-react";
@@ -8,7 +10,7 @@ export default function SignIn() {
     <div className="flex min-h-screen items-center justify-center">
       <Card className="w-[350px]">
         <CardHeader>
-          <CardTitle>Welcome to GitHub Charts</CardTitle>
+          <CardTitle>Welcome to Commit Juice</CardTitle>
           <CardDescription>
             Sign in with your GitHub account to continue
           </CardDescription>

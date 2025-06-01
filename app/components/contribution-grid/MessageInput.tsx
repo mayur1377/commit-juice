@@ -21,7 +21,7 @@ export function MessageInput({ message, offset, onMessageChange, onOffsetChange 
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full items-center justify-center">
       <motion.input
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

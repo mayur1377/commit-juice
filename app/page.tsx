@@ -127,16 +127,16 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full flex flex-col bg-background">
       <Header />
-      <main className="flex-1 flex flex-col items-center px-4 py-12">
-        <div className="w-full flex flex-row items-center justify-center gap-8">
-          <div className="flex flex-col gap-4 w-1/2">
+      <main className="flex-1 flex flex-col items-center px-2 sm:px-4 py-6 sm:py-12">
+        <div className="w-full flex flex-col md:flex-row items-stretch md:items-center justify-center gap-6 md:gap-8">
+          <div className="flex flex-col gap-4 w-full md:w-2/3 lg:w-1/2 mx-auto">
             <MessageInput
               message={message}
               offset={offset}
               onMessageChange={setMessage}
               onOffsetChange={setOffset}
             />
-            <div className="overflow-auto w-full">
+            <div className="overflow-x-auto w-full">
               <ContributionGrid
                 message={message}
                 offset={offset}
@@ -155,7 +155,7 @@ export default function Home() {
                 >
                   {repoUrl ? (
                     <Button 
-                      className="w-full font-press-start" 
+                      className="w-full font-press-start text-xs sm:text-sm py-2 sm:py-3" 
                       onClick={() => window.open(repoUrl, '_blank')}
                     >
                       <ExternalLink className="mr-2 h-4 w-4" />
@@ -163,7 +163,7 @@ export default function Home() {
                     </Button>
                   ) : (
                     <Button 
-                      className="w-full font-press-start" 
+                      className="w-full font-press-start text-xs sm:text-sm py-2 sm:py-3" 
                       onClick={handleGenerate} 
                       disabled={generating}
                     >
@@ -184,7 +184,7 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   className="w-full"
                 >
-                  <Button className="w-full" onClick={() => signIn("github", { callbackUrl: "/" })}>
+                  <Button className="w-full text-xs sm:text-sm py-2 sm:py-3" onClick={() => signIn("github", { callbackUrl: "/" })}>
                     <Github className="mr-2 h-4 w-4" />
                     Sign in with GitHub
                   </Button>
@@ -192,8 +192,8 @@ export default function Home() {
               )}
             </div>
           </div>
-          {/* Year selector on the right, vertically centered */}
-          <div className="flex-shrink-0 flex flex-col items-center">
+          {/* Year selector on the right, vertically centered on desktop, below on mobile */}
+          <div className="flex-shrink-0 flex flex-col items-center mt-6 md:mt-0 md:ml-4">
             <YearSelector
               availableYears={availableYears}
               selectedYear={selectedYear}
